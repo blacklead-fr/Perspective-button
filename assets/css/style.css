@@ -1,0 +1,116 @@
+/* Blacklead.fr | Nicolas Clisson */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+    background: #F2F2F2;
+    height: 100%;
+}
+
+body {
+	font-family: 'Lucida Grande', 'Helvetica Neue', sans-serif;
+	font-size: 13px;
+	height: 100%;
+}
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.fa-2x {
+  font-size: 2em;
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+#container {
+  -webkit-perspective : 1000px;
+  -moz-perspective    : 1000px;
+  -o-perspective      : 1000px;
+  -ms-perspective     : 1000px;
+  perspective         : 1000px;
+
+  -webkit-perspective-origin  : 50% 50%;
+  -moz-perspective-origin     : 50% 50%;
+  -moz-transform-origin       : 50% 50%;
+  -o-perspective-origin       : 50% 50%;
+  -ms-perspective-origin      : 50% 50%;
+  perspective-origin          : 50% 50%;
+ }
+#cube {
+  position: relative;
+  margin:4em auto;
+  height:70px;
+  width:70px;
+  -webkit-transform: rotateX(-35deg) rotateY(45deg);
+  -moz-transform: rotateX(-35deg) rotateY(45deg);
+  -o-transform: rotateX(-35deg) rotateY(45deg);
+  -ms-transform: rotateX(-35deg) rotateY(45deg);
+  transform: rotateX(-35deg) rotateY(45deg);
+
+  -webkit-transform-style : preserve-3d;
+  -moz-transform-style    : preserve-3d;
+  -o-transform-style      : preserve-3d;
+  -ms-transform-style     : preserve-3d;
+  transform-style         : preserve-3d;
+  
+}
+#cube>div {
+  position: absolute;
+  height:30px;
+  width:30px;
+  padding: 20px;
+  background-position:center center;
+  color:#FFF;
+  text-align:center;
+}
+
+#cube div:nth-child(1) {
+  -webkit-transform : translateZ(35px);
+  -moz-transform    : translateZ(35px);
+  -o-transform      : translateZ(35px);
+  -ms-transform     : translateZ(35px);
+  transform         : translateZ(35px);
+  background-color  : #333;
+}
+
+#cube div:nth-child(2) {
+  -webkit-transform : rotateY(-90deg) translateZ(35px);
+  -moz-transform    : rotateY(-90deg) translateZ(35px);
+  -o-transform      : rotateY(-90deg) translateZ(35px);
+  -ms-transform     : rotateY(-90deg) translateZ(35px);
+  transform         : rotateY(-90deg) translateZ(35px);
+  background-color  : #111;
+}
+
+#cube div:nth-child(3)  {
+  -webkit-transform : rotateX(90deg) translateZ(35px);
+  -moz-transform    : rotateX(90deg) translateZ(35px);
+  -o-transform      : rotateX(90deg) translateZ(35px);
+  -ms-transform     : rotateX(90deg) translateZ(35px);
+  transform         : rotateX(90deg) translateZ(35px);
+  background-color  : #222;
+}
+#cube:hover div:nth-child(1), #cube:hover div:nth-child(2){
+  height:1px;
+  bottom:0;
+}
+
+#cube:hover div:nth-child(3)  {
+  background-color  :#09F;
+  top:29px;
+}
